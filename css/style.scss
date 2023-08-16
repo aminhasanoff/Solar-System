@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(..//images/giphy.gif);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.planet{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.sun{
+    width: 70px;
+    height: 45px;
+}
+
+.suncrown{
+    margin-left: 718px;
+    margin-top: 70px;
+    width: 33px;
+    height: 39px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 15px rgba(255, 166, 0, 0.877);
+    animation-name: onoff;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    animation-direction: alternate;
+}
+
+@keyframes onoff {
+    0%{
+        opacity: 40%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.saturn{
+    width: 90px;
+    height: 70px;
+}
+
+.moon{
+    width: 160px;
+    height: 120px;
+    z-index: -1;
+}
+
+#venus{
+    width: 50px;
+    height: 30px;
+}
+
+.blackhole{
+    width: 350px;
+    height: 200px;
+    margin-left: -40px;
+    border-radius: 50%;
+    background-color: #0D0B0E;
+}
+
+.comet{
+    // margin-left: 800px;
+    // margin-top: 10px;
+    margin-right: 666px;
+    margin-top: 100px;
+    float: right;
+    animation-name: comet;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+@keyframes comet {
+    0%{
+        transform: scale(1) translateY(-1000px) translateX(1000px);
+        opacity: 0.3;
+    }
+    50%{
+        transform: scale(2) translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translateY(1000px) translateX(-1000px);
+        opacity: 0.3;
+    }
+}
